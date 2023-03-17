@@ -8,7 +8,7 @@ contract AgreementContract {
         bool consent;
     }
     
-    Agreement[] private agreements;
+    Agreement[] public agreements;
     
     function addAgreement(bytes32 purposeHash, address userId, bool consent) public {
         agreements.push(Agreement(purposeHash, userId, consent));
